@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -33,6 +34,16 @@ public class ChromeCapabilitiesTestNg {
 	@Test
 	public static void main() {
 		System.out.println("Driver success");
+		driver.findElement(By.xpath("//a[@href='register.php']")).click();
+		
+		  driver.findElement(By.name("firstName")).sendKeys("Siva Ram");
+		  driver.findElement(By.name("lastName")).sendKeys("Khandrika");
+		  driver.findElement(By.name("phone")).sendKeys("9000122600");
+		 driver.findElement(By.name("userName")).sendKeys("k_sivaram@rediffmail.com");
+		 driver.findElement(By.name("address1")).sendKeys("nizampet");
+		 driver.findElement(By.name("city")).sendKeys("Hyderabad");
+		driver.findElement(By.xpath("//input[@name='state']")).sendKeys("Telangana");
+
 	}
 	
 	@AfterMethod
