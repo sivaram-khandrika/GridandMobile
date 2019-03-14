@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+  <groupId>MobileUsingChromeMaven</groupId>
+  <artifactId>MobileUsingChromeMaven</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>MavenGrid</name>
+  <description>GridInMaven</description>
+  <url>http://maven.apache.org</url>
+  	<properties>
+		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+
+		<jre.level>1.8</jre.level>
+		<jdk.level>1.8</jdk.level>
+		<testNGXMLFIlePath>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl</testNGXMLFIlePath> 
+	</properties>
+  
+  <dependencies>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium.grid/selenium-grid-hub -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium.grid</groupId>
+		    <artifactId>selenium-grid-hub</artifactId>
+		    <version>1.0.5</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+		    <groupId>io.appium</groupId>
+		    <artifactId>java-client</artifactId>
+		    <version>7.0.0</version>
+		</dependency>
+		 <!-- https://mvnrepository.com/artifact/com.comcast.magic-wand/appium -->
+		<dependency>
+		    <groupId>com.comcast.magic-wand</groupId>
+		    <artifactId>appium</artifactId>
+		    <version>4.0.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/se.redmind/rmtest-appium -->
+		<dependency>
+		    <groupId>se.redmind</groupId>
+		    <artifactId>rmtest-appium</artifactId>
+		    <version>2.8.3</version>
+		</dependency>
+		  <!-- https://mvnrepository.com/artifact/com.github.genium-framework/Appium-Support -->
+		<dependency>
+		    <groupId>com.github.genium-framework</groupId>
+		    <artifactId>Appium-Support</artifactId>
+		    <version>1.0.5</version>
+		</dependency>
+		  
+  </dependencies>
+  <build>
+     <sourceDirectory>src</sourceDirectory>
+    <!--<sourceDirectory>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl\src</sourceDirectory>
+    <scriptSourceDirectory>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl\src\scripts</scriptSourceDirectory>
+    <testSourceDirectory>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl\src</testSourceDirectory>
+    <outputDirectory>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl\target\classes</outputDirectory>
+    <testOutputDirectory>C:\Siva\Selenium\MobileUsingChromeMavenVersionControl\target\test-classes</testOutputDirectory>-->
+
+    <plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.1</version>
+			<configuration>
+				<source>${jdk.level}</source>
+				<target>${jdk.level}</target>
+			</configuration>
+		</plugin>
+
+		<!-- Below plug-in is used to execute tests -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.19.1</version>
+			<configuration>
+				<suiteXmlFiles>
+					<!-- TestNG suite XML files -->
+					<!-- <suiteXmlFile>${testNGXMLFIlePath}\iFrame.xml</suiteXmlFile> 
+					<suiteXmlFile>TestNg.xml</suiteXmlFile>  -->
+					<suiteXmlFile>${testNGXMLFIlePath}\TestNg.xml</suiteXmlFile>
+					
+				</suiteXmlFiles>
+			</configuration>
+		</plugin>
+      
+    </plugins>
+  </build>
+
+  <scm>
+  	<url>https://github.com/sivaram-khandrika/seleniumGRIDandAppium.git</url>
+  	<developerConnection>Siva Ram Khandrika</developerConnection>
+  	<tag>Selenium Grid and Appium Test</tag>
+  </scm>
+</project>

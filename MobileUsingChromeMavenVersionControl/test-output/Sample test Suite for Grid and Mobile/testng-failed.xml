@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Sample test Suite for Grid and Mobile]" parallel="methods">
+  <test thread-count="2" name="Grid Execution(failed)" parallel="methods">
+    <parameter name="environment" value="desktop"/>
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="chrom.SeleniumGridCapabilities">
+        <methods>
+          <include name="teadDown"/>
+          <include name="main"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- chrom.SeleniumGridCapabilities -->
+    </classes>
+  </test> <!-- Grid Execution(failed) -->
+</suite> <!-- Failed suite [Sample test Suite for Grid and Mobile] -->

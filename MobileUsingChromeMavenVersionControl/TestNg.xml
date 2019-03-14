@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sample test Suite for Grid and Mobile" thread-count="2"  parallel="true">
+	<test name = "Grid Execution">
+		<parameter name="browserName" value="chrome"/>
+		<parameter name="environment" value="desktop"/>
+		<classes>
+			<class name = "chrom.SeleniumGridCapabilities"/>
+		</classes>
+	</test>
+	<test name = "Appium Mobile Execution">
+		<parameter name="browserName" value="chrome"/>
+		<parameter name="environment" value="mobile"/>
+		<classes>
+			<class name = "chrom.ChromeCapabilitiesTestNg"/>
+		</classes>
+	</test> 
+</suite>
